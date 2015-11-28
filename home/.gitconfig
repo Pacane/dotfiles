@@ -1,0 +1,27 @@
+[user]
+	email = iamquebecois@gmail.com
+	name = Joel Trottier-Hebert
+[push]
+	default = simple
+[core]
+	autocrlf = input
+	editor = vim -f
+	excludesfile = /home/joel/.gitignore_global
+[alias]
+    co = checkout
+    cob = checkout -b
+    cma = !git add -A && git commit -m
+    cm = git commit -m
+    save = !git add -A && git commit -m "SAVEPOINT"
+    wip = !git add -u && git commit -m "WIP"
+    pl = pull
+    ps = push
+[merge]
+    tool = intellij
+[mergetool "intellij"]
+    cmd = idea-ue-eap merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+    trustExitCode = true
+[diff]
+    tool = intellij
+[difftool "intellij"]
+    cmd = idea-ue-eap diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")

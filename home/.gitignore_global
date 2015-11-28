@@ -1,0 +1,9 @@
+.idea/
+*.swp
+*.iml
+.DS_Store
+
+.packages
+.pub/
+.build/
+pubspec.lock
