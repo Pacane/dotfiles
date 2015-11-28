@@ -1,0 +1,35 @@
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=5000
+SAVEHIST=5000
+setopt appendhistory autocd beep extendedglob nomatch
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/joel/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# ZSH OPTIONS
+bindkey "^R" history-incremental-search-backward
+
+source ~/.genericrc
+source ~/.archrc
+source ~/.dartrc
+source ~/.gorc
+source ~/.rubyrc
+source ~/.envrc

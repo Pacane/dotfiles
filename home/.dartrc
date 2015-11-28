@@ -1,0 +1,7 @@
+# DART OPTIONS
+export DART_SDK_PATH=$HOME/apps/dart-sdk
+export DARTIUM_PATH=$HOME/apps/dartium
+export PATH=$PATH:$DART_SDK_PATH/bin
+export PATH=$PATH:~/apps/dartium
+export PATH=$PATH:~/apps/content-shell
+export PATH=$PATH:~/.pub-cache/bin

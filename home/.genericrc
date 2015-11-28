@@ -1,0 +1,4 @@
+# GENERIC OPTIONS
+export TERM=screen-256color
+alias ll="ls -la"
+alias top=htop

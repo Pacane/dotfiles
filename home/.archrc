@@ -1,0 +1,2 @@
+# ARCH OPTIONS
+zstyle ':completion:*:pacaur:*' remote-access true
