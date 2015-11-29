@@ -92,6 +92,6 @@ endif
 
 set omnifunc=syntaxcomplete#Complete
 
+source ~/.powerline-vim-rc
+
 set laststatus=2
-set rtp+=/usr/lib/python3.5/site-packages/powerline/bindings/vim
-let $PYTHONPATH='/usr/lib/python3.5/site-packages'
