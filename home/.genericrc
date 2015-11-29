@@ -2,3 +2,4 @@
 export TERM=screen-256color
 alias ll="ls -la"
 alias top=htop
+export EDITOR=vim
