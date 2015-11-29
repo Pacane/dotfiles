@@ -3,13 +3,11 @@ ctrlp.vim
 dart-vim-plugin
 emmet-vim
 gundo.vim
-lightline.vim
 matchit
 neobundle.vim
 nerdtree
 syntastic
 tabular
-tmuxline.vim
 unite.vim
 vim-csharp
 vim-css-color

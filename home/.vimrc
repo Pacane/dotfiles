@@ -39,8 +39,6 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'edkolev/tmuxline.vim'
-NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'xuhdev/vim-latex-live-preview'
 NeoBundle 'dart-lang/dart-vim-plugin'
@@ -75,84 +73,7 @@ nmap s <Plug>(easymotion-s2)
 " Turn on case sensitive feature
 let g:EasyMotion_smartcase = 1
 """""""""""""""""""
-""" Lightline """""""
-set laststatus=2
-"""""""""""""""""""
 set noshowmode
-"powerline symbols
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
-
-let g:lightline = {
-            \ 'colorscheme': 'wombat',
-            \ 'mode_map': { 'c': 'NORMAL' },
-            \ 'active': {
-            \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
-            \ },
-            \ 'component_function': {
-            \   'modified': 'MyModified',
-            \   'readonly': 'MyReadonly',
-            \   'fugitive': 'MyFugitive',
-            \   'filename': 'MyFilename',
-            \   'fileformat': 'MyFileformat',
-            \   'filetype': 'MyFiletype',
-            \   'fileencoding': 'MyFileencoding',
-            \   'mode': 'MyMode',
-            \ },
-            \ 'separator': { 'left': '', 'right': '' },
-            \ 'subseparator': { 'left': '', 'right': '' }
-            \ }
-
-function! MyModified()
-    return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
-endfunction
-
-function! MyReadonly()
-    return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? '' : ''
-endfunction
-
-function! MyFilename()
-    return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-                \ (&ft == 'vimfiler' ? vimfiler#get_status_string() : 
-                \  &ft == 'unite' ? unite#get_status_string() : 
-                \  &ft == 'vimshell' ? vimshell#get_status_string() :
-                \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
-                \ ('' != MyModified() ? ' ' . MyModified() : '')
-endfunction
-
-function! MyFugitive()
-    if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
-        let _ = fugitive#head()
-        return strlen(_) ? ' '._ : ''
-    endif
-    return ''
-endfunction
-
-function! MyFileformat()
-    return winwidth(0) > 70 ? &fileformat : ''
-endfunction
-
-function! MyFiletype()
-    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
-endfunction
-
-function! MyFileencoding()
-    return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
-endfunction
-
-function! MyMode()
-    return winwidth(0) > 60 ? lightline#mode() : ''
-endfunction
-
 let g:livepreview_previewer = 'evince'
 
 set tabstop=4
@@ -170,3 +91,7 @@ if $TERM =~ '^screen-256color'
 endif
 
 set omnifunc=syntaxcomplete#Complete
+
+set laststatus=2
+set rtp+=/usr/lib/python3.5/site-packages/powerline/bindings/vim
+let $PYTHONPATH='/usr/lib/python3.5/site-packages'
