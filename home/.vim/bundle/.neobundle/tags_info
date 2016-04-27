@@ -6,6 +6,7 @@ gundo.vim
 matchit
 neobundle.vim
 nerdtree
+quickfixstatus
 syntastic
 tabular
 unite.vim
@@ -15,8 +16,10 @@ vim-easymotion
 vim-fugitive
 vim-gitgutter
 vim-gocode
+vim-hier
 vim-latex-live-preview
 vim-livedown
 vim-markdown
 vim-multiple-cursors
+vimproc.vim
 yaml-vim

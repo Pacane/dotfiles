@@ -1,7 +1,7 @@
 scriptencoding utf-8
 set encoding=utf-8
 set t_Co=256
-set term=screen-256color
+set term=xterm-256color
 syntax on
 
 colorscheme wombat256mod
@@ -50,6 +50,17 @@ NeoBundle 'tmhedberg/matchit'
 NeoBundle 'shime/vim-livedown'
 NeoBundle 'ingydotnet/yaml-vim'
 NeoBundle 'ap/vim-css-color'
+NeoBundle 'jceb/vim-hier'
+NeoBundle 'dannyob/quickfixstatus'
+NeoBundle 'Shougo/vimproc.vim', {
+            \ 'build' : {
+            \     'windows' : 'tools\\update-dll-mingw',
+            \     'cygwin' : 'make -f make_cygwin.mak',
+            \     'mac' : 'make',
+            \     'linux' : 'make',
+            \     'unix' : 'gmake',
+            \    },
+            \ }
 call neobundle#end()
 
 " Required:
@@ -65,6 +76,8 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 set expandtab
 set smarttab
 set number
+set relativenumber
+set cursorline
 """""""""""""""""""
 """ EASY MOTION """
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
