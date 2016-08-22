@@ -7,3 +7,8 @@
 .pub/
 .build/
 pubspec.lock
+
+# DGLogik
+.key
+nodes.json*
+

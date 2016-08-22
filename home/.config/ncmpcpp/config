@@ -200,7 +200,7 @@ visualizer_color = blue, cyan, green, yellow, magenta, red
 ## Note: colors can be nested.
 ##
 #
-#song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
+#song_list_format = {%a - }{%D}{%t}|{$8%f$9}$R{$3(%l)$9}
 #
 #song_status_format = {{%a{ "%b"{ (%y)}} - }{%t}}|{%f}
 #
@@ -258,8 +258,7 @@ visualizer_color = blue, cyan, green, yellow, magenta, red
 ##
 ## Note: You can give a column additional attributes by putting appropriate
 ## character after displayed tag character. Available attributes are:
-##
-## - r - column will be right aligned
+#### - r - column will be right aligned
 ## - E - if tag is empty, empty tag marker won't be displayed
 ##
 ## You can also:
@@ -277,6 +276,7 @@ visualizer_color = blue, cyan, green, yellow, magenta, red
 ##
 #
 #song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
+song_columns_list_format = (20)[]{a} (6f)[green]{NE} (34)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l} (20)[white]{D} 
 #
 ##### various settings #####
 #
@@ -301,9 +301,9 @@ visualizer_color = blue, cyan, green, yellow, magenta, red
 #
 #browser_display_mode = classic
 #
-#search_engine_display_mode = classic
+search_engine_display_mode = columns
 #
-#playlist_editor_display_mode = classic
+#playlist_editor_display_mode = columns
 #
 #discard_colors_if_item_is_selected = yes
 #
@@ -331,7 +331,7 @@ visualizer_color = blue, cyan, green, yellow, magenta, red
 #
 ## Available values: classic, alternative.
 ##
-#user_interface = classic
+user_interface = alternative
 #
 #data_fetching_delay = yes
 #
@@ -422,7 +422,7 @@ visualizer_color = blue, cyan, green, yellow, magenta, red
 #
 #display_volume_level = yes
 #
-#display_bitrate = no
+display_bitrate = yes
 #
 #display_remaining_time = no
 #

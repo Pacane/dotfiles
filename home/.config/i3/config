@@ -29,6 +29,8 @@ font pango:Hack 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+new_window pixel 3
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -38,6 +40,8 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 set $rofiStyle -opacity 85 -font "Hack 10" -lines 3 -eh 2 -width 20
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu $rofiStyle'
+bindsym F12 exec --no-startup-id rofi -show run $rofiStyle 
+bindsym Shift+F12 exec --no-startup-id rofi -show window $rofiStyle
 
 # change focus
 bindsym $mod+j focus left
@@ -219,6 +223,7 @@ assign [class="google-chrome"] $workspace2
 
 assign [class="jetbrains-idea"] $workspace1
 
+for_window [window_role="pop-up"] floating enable,move absolute center
 #########################
 # Autostart
 #########################
@@ -226,17 +231,18 @@ exec --no-startup-id cadence-session-start --system-start
 exec_always --no-startup-id xrandr --output DVI-I-1 --mode 1920x1080 --rate 144 --primary
 exec_always --no-startup-id /home/joel/apps/mouse-sensitivity.sh 
 exec_always --no-startup-id nitrogen --restore
-exec --no-startup-id rofi -key-run F12 $rofiStyle 
-#exec --no-startup-id xfce4-terminal --title=profanity --command="profanity -a livecoding"
+exec --no-startup-id slack
 exec --no-startup-id google-chrome-stable
-#exec --no-startup-id slack
-#exec --no-startup-id obs
 exec --no-startup-id dunst
-exec_always --no-startup-id calfjackhost --load ~/calf_plugins
-exec_always --no-startup-id compton --config ~/.config/compton/config -b
+exec --no-startup-id mpdscribble
+exec --no-startup-id mpd
+exec --no-startup-id calfjackhost --load calf_plugins
+exec --no-startup-id gladish
+#exec --no-startup-id compton --config ~/.config/compton/config
 
 # gaps
 smart_gaps on
 for_window [class="^.*"] border pixel 3
 gaps inner 5
 gaps outer 2
+hide_edge_borders both

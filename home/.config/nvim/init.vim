@@ -1,6 +1,6 @@
 colorscheme wombat256mod
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'Shougo/unite.vim'
 Plug 'scrooloose/nerdtree'
@@ -23,7 +23,6 @@ Plug 'shime/vim-livedown'
 Plug 'ingydotnet/yaml-vim'
 Plug 'ap/vim-css-color'
 Plug 'jceb/vim-hier'
-Plug 'dannyob/quickfixstatus'
 Plug 'Shougo/vimproc.vim', {
             \ 'build' : {
             \     'windows' : 'tools\\update-dll-mingw',
@@ -35,7 +34,12 @@ Plug 'Shougo/vimproc.vim', {
             \ }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-gradle'
+Plug 'vim-erlang/vim-erlang-runtime'
+Plug 'vim-erlang/vim-erlang-compiler'
+Plug 'vim-erlang/vim-erlang-omnicomplete'
+Plug 'vim-erlang/vim-erlang-tags'
+Plug 'tpope/vim-unimpaired'
+Plug 'majutsushi/tagbar'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -55,3 +59,5 @@ let g:EasyMotion_smartcase = 1
 """""""""""""""""""
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "wombat"
+
+:set tags^=/home/joel/code/erlang/ex1/tags

@@ -5,3 +5,5 @@ export PATH=$PATH:$DART_SDK_PATH/bin
 export PATH=$PATH:~/apps/dartium
 export PATH=$PATH:~/apps/content-shell
 export PATH=$PATH:~/.pub-cache/bin
+export PATH=$PATH:~/code/flutter/bin
+export PATH=$PATH:~/apps/dartino-sdk/bin
