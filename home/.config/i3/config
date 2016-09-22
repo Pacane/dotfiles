@@ -191,6 +191,15 @@ client.focused #0088CC #0088CC #ffffff #dddddd
 client.focused_inactive #333333 #333333 #888888 #292d2e
 client.unfocused #333333 #333333 #888888 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
+###########################
+# MPC global keybinds
+###########################
+bindsym $mod+F4 exec mpc toggle
+bindsym $mod+F5 exec mpc prev
+bindsym $mod+F6 exec mpc next
+bindsym $mod+F2 exec mpc volume -5
+bindsym $mod+F3 exec mpc volume +5
+bindsym $mod+F1 exec mpc volume 0
 
 ###########################
 # Assignments
@@ -223,6 +232,8 @@ assign [class="google-chrome"] $workspace2
 
 assign [class="jetbrains-idea"] $workspace1
 
+assign [class="qbittorrent"] $workspace3
+
 for_window [window_role="pop-up"] floating enable,move absolute center
 #########################
 # Autostart
@@ -231,12 +242,14 @@ exec --no-startup-id cadence-session-start --system-start
 exec_always --no-startup-id xrandr --output DVI-I-1 --mode 1920x1080 --rate 144 --primary
 exec_always --no-startup-id /home/joel/apps/mouse-sensitivity.sh 
 exec_always --no-startup-id nitrogen --restore
+exec --no-startup-id redshift-gtk
+exec --no-startup-id qbittorrent
 exec --no-startup-id slack
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id dunst
 exec --no-startup-id mpdscribble
 exec --no-startup-id mpd
-exec --no-startup-id calfjackhost --load calf_plugins
+#exec --no-startup-id calfjackhost --load calf_plugins
 exec --no-startup-id gladish
 #exec --no-startup-id compton --config ~/.config/compton/config
 

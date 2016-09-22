@@ -2,6 +2,7 @@ colorscheme wombat256mod
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'Shougo/unite.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
@@ -59,5 +60,15 @@ let g:EasyMotion_smartcase = 1
 """""""""""""""""""
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "wombat"
+let g:LatexBox_viewer = 'zathura'
+let g:LatexBox_latexmk_options = "-pdflatex='pdflatex -synctex=1 \%O \%S'"
+autocmd BufWritePost *.tex call SaveAndGoHighlightCurrentPosition()
 
+map <F11> :call SaveAndGoHighlightCurrentPosition()
+
+function! SaveAndGoHighlightCurrentPosition()
+        let filename = expand('%:r')
+        :Latexmk
+        :execute 'silent !zathura --synctex-forward ' . line('.') . ':' . col('.') . ':' . filename . '.tex ' . filename . '.pdf'
+endfunction
 :set tags^=/home/joel/code/erlang/ex1/tags
