@@ -1,0 +1,32 @@
+[Added Associations]
+application/octet-stream=org.gnome.gedit.desktop
+application/pdf=evince.desktop
+application/x-java-archive=org.gnome.FileRoller.desktop
+application/x-ms-dos-executable=wine.desktop
+application/xml=gvim.desktop
+application/zip=org.gnome.FileRoller.desktop
+audio/mpeg=clementine.desktop;spek.desktop;vlc.desktop;vlc.desktopghb.desktop;
+audio/x-vorbis+ogg=mplayer.desktopvlc.desktop
+audio/x-wav=vlc.desktop
+image/jpeg=shotwell-viewer.desktop;gimp.desktop;pinta.desktop;eog.desktop;darktable.desktop;
+image/png=shotwell-viewer.desktop;eog.desktop;
+inode/directory=exo-file-manager.desktop
+text/plain=gvim.desktop
+video/x-flv=vlc.desktop
+video/x-matroska=vlc.desktop;vlc.desktopmplayer.desktopmpv.desktop;
+video/x-msvideo=vlc.desktop
+x-scheme-handler/file=nautilus.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/trash=nautilus.desktop
+audio/flac=vlc.desktop;spek.desktop;
+
+[Default Applications]
+application/xhtml_xml=google-chrome.desktop
+audio/x-vorbis+ogg=vlc.desktop
+image/webp=google-chrome.desktop
+text/html=google-chrome.desktop
+text/xml=google-chrome.desktop
+x-scheme-handler/ftp=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
