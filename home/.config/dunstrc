@@ -241,5 +241,8 @@
 #    appname = Pidgin
 #    summary = *twitter.com*
 #    urgency = normal
+[play_sound]
+   summary= "*"
+   script = /home/joel/apps/alert.sh 
 #
 # vim: ft=cfg

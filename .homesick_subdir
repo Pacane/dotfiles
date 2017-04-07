@@ -10,3 +10,6 @@
 .config/ncmpcpp
 .config/vifm
 .vim
+.config/polybar
+apps
+apps/weechat/plugins

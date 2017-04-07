@@ -72,3 +72,5 @@ function! SaveAndGoHighlightCurrentPosition()
         :execute 'silent !zathura --synctex-forward ' . line('.') . ':' . col('.') . ':' . filename . '.tex ' . filename . '.pdf'
 endfunction
 :set tags^=/home/joel/code/erlang/ex1/tags
+hi Normal guibg=NONE ctermbg=NONE
+hi NonText ctermbg=NONE
