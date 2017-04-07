@@ -1,0 +1,83 @@
+!! special
+*.foreground:   #C5C8C6
+*.background:   #1E1E1E
+*.cursorColor:  #ffffff
+
+! black
+*.color0:       #000000
+*.color8:       #4C4C4C
+
+! red
+*.color1:       #CD0000
+*.color9:       #FF0000
+
+! green
+*.color2:       #00CD00
+*.color10:      #00FF00
+
+! yellow
+*.color3:       #CDCD00
+*.color11:      #FFFF00
+
+! blue
+*.color4:       #0C5295
+*.color12:      #4682B4
+
+! magenta
+*.color5:       #CD00CD
+*.color13:      #FF00FF
+
+! cyan
+*.color6:       #00CDCD
+*.color14:      #00FFFF
+
+! white
+*.color7:       #E5E5E5
+*.color15:      #FFFFFF
+
+URxvt*font: xft:Hack-Regular:pixelsize=13,xft:FontAwesome 
+URxvt*boldFont: xft:Hack-Bold:pixelsize=13:weight=bold,xft:FontAwesome 
+
+URxvt.perl-ext-common: default,matcher,url-select
+
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+
+URxvt*scrollBar: false
+URxvt.url-launcher: google-chrome-stable
+URxvt.matcher.button: 1
+URxvt.tabbed.new-button: false
+URxvt.tabbed.title: false
+URxvt.tabbed.autohide: true
+URxvt.tabbed.tabbar-bg: 7
+URxvt.tabbed.tab-fg: 7
+URxvt.tabbed.tabbar-fg: 0
+URxvt.tabbed.tab-bg: 0
+URxvt.letterSpace: -1
+URxvt.lineSpace: -1
+URxvt*geometry: 80x30
+URxvt.transparent:   true
+URxvt.shading:       15
+
+UXTerm*termName: xterm-256color
+UXTerm*faceName: Hack, FontAwesome
+UXTerm*faceSize: 10
+UXTerm*faceNameDoubleSize: FontAwesome
+!UXTerm*font: xft:Source\ Code\ Pro\ for\ Powerline:size=10
+
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #393939, #393939, #268bd2
+rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
+rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
+rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
+
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
